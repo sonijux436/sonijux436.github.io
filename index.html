@@ -1,0 +1,1364 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>朴妮唛 - 官方视频品牌门户 | 原创高清内容社区</title>
+<meta name="description" content="朴妮唛官方网站，专注原创视频内容生态的视频品牌门户，汇聚高清精品内容、多元创作者与真实社区互动，持续运营值得信赖的视频平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2b45'/%3E%3Cpath d='M24 18l24 14-24 14z' fill='%23ff5a5f'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --pn-navy:#1b2b45;
+    --pn-navy-soft:#2c405e;
+    --pn-ink:#182234;
+    --pn-muted:#5c6b82;
+    --pn-bg:#f2f5f9;
+    --pn-card:#ffffff;
+    --pn-blue:#2f6df6;
+    --pn-blue-soft:#e5edff;
+    --pn-coral:#ff5a5f;
+    --pn-line:#dbe3ee;
+    --pn-radius:16px;
+    --pn-shadow:0 10px 30px rgba(27,43,69,.08);
+    --pn-head-h:118px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:var(--pn-head-h);}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    background:var(--pn-bg);
+    color:var(--pn-ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3,h4{margin:0;line-height:1.35;color:var(--pn-navy);}
+  p{margin:0;}
+  ul{margin:0;padding:0;list-style:none;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  .pn-wrap{width:min(1180px,92vw);margin:0 auto;}
+
+  /* ===== 公告条 + 页头 吸顶 ===== */
+  .pn-topbar{
+    position:sticky;top:0;z-index:60;
+    background:var(--pn-navy);
+    color:#dfe8f6;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .pn-topbar-in{
+    display:flex;align-items:center;gap:12px;
+    padding:9px 0;font-size:13.5px;
+    white-space:nowrap;overflow:hidden;
+  }
+  .pn-topbar-badge{
+    flex:none;background:var(--pn-coral);color:#fff;
+    font-size:12px;font-weight:700;letter-spacing:.6px;
+    padding:2px 9px;border-radius:99px;
+  }
+  .pn-topbar-txt{
+    overflow:hidden;text-overflow:ellipsis;
+    flex:1 1 auto;min-width:0;
+  }
+  .pn-topbar-txt b{color:#fff;font-weight:600;}
+  .pn-topbar-more{flex:none;color:#9fb7dc;font-size:12.5px;}
+
+  .pn-header{
+    position:sticky;top:38px;z-index:55;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--pn-line);
+  }
+  .pn-header-in{
+    display:flex;align-items:center;gap:22px;
+    min-height:70px;padding:10px 0;
+  }
+  .pn-brand{display:flex;align-items:center;gap:11px;flex:none;}
+  .pn-brand-mark{
+    width:42px;height:42px;border-radius:12px;flex:none;
+    background:linear-gradient(135deg,var(--pn-navy),var(--pn-blue));
+    display:grid;place-items:center;
+    box-shadow:0 6px 16px rgba(47,109,246,.28);
+  }
+  .pn-brand-mark svg{width:19px;height:19px;fill:#fff;margin-left:2px;}
+  .pn-brand-name{font-size:19px;font-weight:800;letter-spacing:1px;color:var(--pn-navy);}
+  .pn-brand-sub{font-size:11px;color:var(--pn-muted);letter-spacing:.5px;line-height:1.2;}
+
+  .pn-nav{display:flex;align-items:center;gap:4px;margin-left:6px;flex:1 1 auto;}
+  .pn-nav a{
+    font-size:14.5px;color:var(--pn-navy-soft);font-weight:500;
+    padding:7px 11px;border-radius:9px;transition:.2s;white-space:nowrap;
+  }
+  .pn-nav a:hover{background:var(--pn-blue-soft);color:var(--pn-blue);}
+
+  .pn-header-tools{display:flex;align-items:center;gap:10px;flex:none;}
+  .pn-search{position:relative;display:flex;align-items:center;}
+  .pn-search input{
+    width:186px;padding:8px 34px 8px 13px;
+    border:1px solid var(--pn-line);border-radius:99px;
+    font-size:13.5px;outline:none;background:#f6f8fc;
+    transition:.2s;color:var(--pn-ink);
+  }
+  .pn-search input:focus{width:216px;border-color:var(--pn-blue);background:#fff;box-shadow:0 0 0 3px rgba(47,109,246,.13);}
+  .pn-search-btn{
+    position:absolute;right:5px;width:26px;height:26px;border-radius:50%;
+    display:grid;place-items:center;color:var(--pn-blue);
+  }
+  .pn-search-btn svg{width:14px;height:14px;fill:currentColor;}
+  .pn-btn-primary{
+    background:var(--pn-blue);color:#fff;font-weight:600;font-size:13.5px;
+    padding:9px 18px;border-radius:99px;transition:.2s;
+    box-shadow:0 6px 16px rgba(47,109,246,.3);
+  }
+  .pn-btn-primary:hover{background:#1f57d0;transform:translateY(-1px);}
+  .pn-burger{
+    display:none;width:40px;height:40px;border-radius:10px;
+    border:1px solid var(--pn-line);background:#fff;
+    place-items:center;
+  }
+  .pn-burger svg{width:19px;height:19px;fill:var(--pn-navy);}
+
+  /* ===== 首屏 ===== */
+  .pn-hero{
+    background:
+      radial-gradient(1100px 460px at 88% -10%,rgba(47,109,246,.16),transparent 60%),
+      radial-gradient(700px 400px at 0% 110%,rgba(255,90,95,.12),transparent 65%),
+      #eef3fa;
+    border-bottom:1px solid var(--pn-line);
+  }
+  .pn-hero-in{
+    display:grid;grid-template-columns:minmax(0,5fr) minmax(0,5fr);
+    gap:46px;align-items:center;padding:54px 0 58px;
+  }
+  .pn-hero-kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;font-weight:700;letter-spacing:1.4px;
+    color:var(--pn-blue);background:#fff;
+    border:1px solid var(--pn-line);padding:5px 13px;border-radius:99px;
+    margin-bottom:18px;
+  }
+  .pn-hero-kicker i{width:7px;height:7px;border-radius:50%;background:var(--pn-coral);display:block;}
+  .pn-hero h1{
+    font-size:clamp(38px,5.4vw,62px);
+    font-weight:900;letter-spacing:2px;
+    color:var(--pn-navy);margin-bottom:6px;
+  }
+  .pn-hero-slogan{
+    font-size:clamp(17px,2vw,21px);font-weight:600;
+    color:var(--pn-blue);letter-spacing:.6px;margin-bottom:16px;
+  }
+  .pn-hero-lead{
+    font-size:15px;color:#43536c;max-width:56ch;margin-bottom:22px;
+  }
+  .pn-hero-stats{
+    display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;
+  }
+  .pn-stat{
+    background:#fff;border:1px solid var(--pn-line);border-radius:12px;
+    padding:10px 16px;min-width:112px;box-shadow:0 4px 14px rgba(27,43,69,.05);
+  }
+  .pn-stat b{display:block;font-size:22px;color:var(--pn-navy);font-weight:800;letter-spacing:.5px;}
+  .pn-stat span{font-size:12px;color:var(--pn-muted);letter-spacing:.4px;}
+  .pn-hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+  .pn-btn-ghost{
+    background:#fff;border:1px solid var(--pn-line);color:var(--pn-navy);
+    font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:99px;transition:.2s;
+  }
+  .pn-btn-ghost:hover{border-color:var(--pn-blue);color:var(--pn-blue);transform:translateY(-1px);}
+  .pn-hero-visual{
+    position:relative;border-radius:22px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(27,43,69,.22);
+    border:1px solid rgba(255,255,255,.7);
+    background:#0f1b2e;
+  }
+  .pn-hero-visual img{width:100%;aspect-ratio:16/12;object-fit:cover;}
+  .pn-hero-tag{
+    position:absolute;left:16px;bottom:16px;right:16px;
+    display:flex;align-items:center;gap:10px;
+    background:rgba(15,27,46,.72);backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,.16);
+    color:#eaf1fb;border-radius:12px;padding:10px 13px;font-size:12.5px;
+  }
+  .pn-hero-tag .pn-playdot{
+    width:30px;height:30px;border-radius:50%;background:var(--pn-coral);flex:none;
+    display:grid;place-items:center;
+  }
+  .pn-hero-tag .pn-playdot svg{width:12px;height:12px;fill:#fff;margin-left:2px;}
+
+  /* ===== 通用区块 ===== */
+  .pn-sec{padding:62px 0;}
+  .pn-sec.alt{background:#fff;border-top:1px solid var(--pn-line);border-bottom:1px solid var(--pn-line);}
+  .pn-sec-head{margin-bottom:30px;max-width:70ch;}
+  .pn-sec-kicker{
+    font-size:12px;font-weight:800;letter-spacing:2.4px;color:var(--pn-coral);
+    text-transform:uppercase;display:block;margin-bottom:8px;
+  }
+  .pn-sec-head h2{font-size:clamp(25px,3.2vw,34px);font-weight:800;letter-spacing:.5px;}
+  .pn-sec-head p{color:var(--pn-muted);font-size:14.5px;margin-top:10px;}
+  .pn-h3{font-size:19px;font-weight:700;margin-bottom:10px;}
+  .pn-h4{font-size:16px;font-weight:700;margin-bottom:6px;color:var(--pn-navy);}
+
+  /* ===== 关键内容：焦点大图 + 文字推荐（一幅重点大图 + 文字列表） ===== */
+  .pn-focus-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:30px;align-items:start;}
+  .pn-focus-main{
+    background:#fff;border-radius:var(--pn-radius);overflow:hidden;
+    border:1px solid var(--pn-line);box-shadow:var(--pn-shadow);
+  }
+  .pn-focus-main img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+  .pn-focus-main-body{padding:22px 24px 24px;}
+  .pn-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+  .pn-tag{
+    font-size:11.5px;font-weight:600;letter-spacing:.4px;
+    background:var(--pn-blue-soft);color:var(--pn-blue);
+    padding:3px 10px;border-radius:99px;
+  }
+  .pn-tag.coral{background:#ffe9ea;color:#d63a3f;}
+  .pn-tag.navy{background:#e8ecf4;color:var(--pn-navy-soft);}
+  .pn-focus-main h3{font-size:23px;margin-bottom:9px;}
+  .pn-focus-main p{font-size:14px;color:#4a5a73;}
+  .pn-meta{
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    font-size:12.5px;color:var(--pn-muted);margin-top:14px;
+  }
+  .pn-meta b{color:var(--pn-navy);font-weight:600;}
+
+  .pn-list-side{display:grid;gap:12px;}
+  .pn-list-item{
+    background:#fff;border:1px solid var(--pn-line);border-radius:12px;
+    padding:15px 17px;transition:.22s;cursor:pointer;
+  }
+  .pn-list-item:hover{border-color:#b9cdf5;transform:translateX(3px);box-shadow:0 8px 20px rgba(47,109,246,.1);}
+  .pn-list-item h4{font-size:15px;font-weight:700;margin-bottom:5px;color:var(--pn-navy);}
+  .pn-list-item p{font-size:13px;color:var(--pn-muted);}
+  .pn-list-item .pn-meta{margin-top:8px;}
+  .pn-list-item .pn-meta svg{width:12px;height:12px;fill:currentColor;vertical-align:-1px;}
+
+  /* ===== 视频列表 + 卡片混合 ===== */
+  .pn-video-cols{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;
+  }
+  .pn-video-card{
+    background:#fff;border:1px solid var(--pn-line);border-radius:var(--pn-radius);
+    overflow:hidden;display:flex;flex-direction:column;transition:.24s;
+  }
+  .pn-video-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(27,43,69,.13);border-color:#c7d7f3;}
+  .pn-video-card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+  .pn-video-card-body{padding:17px 19px 19px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .pn-video-card h4{font-size:16.5px;font-weight:700;}
+  .pn-video-card p{font-size:13px;color:var(--pn-muted);}
+  .pn-video-card .pn-meta{margin-top:auto;padding-top:6px;}
+
+  .pn-video-rows{display:grid;gap:0;margin-top:26px;background:#fff;border:1px solid var(--pn-line);border-radius:var(--pn-radius);overflow:hidden;}
+  .pn-vrow{
+    display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:16px;align-items:center;
+    padding:16px 20px;border-bottom:1px solid var(--pn-line);transition:.2s;
+  }
+  .pn-vrow:last-child{border-bottom:none;}
+  .pn-vrow:hover{background:#f7faff;}
+  .pn-vrow-idx{font-size:15px;font-weight:800;color:#b7c6dd;letter-spacing:1px;text-align:center;}
+  .pn-vrow-main h4{font-size:15.5px;font-weight:700;}
+  .pn-vrow-main p{font-size:12.8px;color:var(--pn-muted);margin-top:2px;}
+  .pn-vrow-actions{display:flex;gap:8px;align-items:center;flex:none;}
+  .pn-iconbtn{
+    width:34px;height:34px;border-radius:50%;border:1px solid var(--pn-line);
+    display:grid;place-items:center;background:#fff;transition:.2s;color:var(--pn-muted);
+  }
+  .pn-iconbtn svg{width:15px;height:15px;fill:currentColor;}
+  .pn-iconbtn:hover{border-color:var(--pn-blue);color:var(--pn-blue);}
+  .pn-iconbtn.on{background:#ffe9ea;border-color:#ffb9bb;color:var(--pn-coral);}
+  .pn-count{font-size:12.5px;color:var(--pn-muted);min-width:32px;text-align:left;}
+
+  /* ===== 专题 ===== */
+  .pn-chapters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+  .pn-chapter{
+    background:#fff;border:1px solid var(--pn-line);border-radius:var(--pn-radius);
+    padding:22px 22px 24px;display:flex;flex-direction:column;gap:12px;transition:.22s;
+  }
+  .pn-chapter:hover{box-shadow:0 14px 30px rgba(27,43,69,.1);}
+  .pn-chapter-status{
+    align-self:flex-start;font-size:11.5px;font-weight:700;letter-spacing:.5px;
+    padding:3px 10px;border-radius:99px;background:#e9f7ee;color:#1f8a4c;
+  }
+  .pn-chapter-status.ing{background:#fff4e2;color:#b5741a;}
+  .pn-chapter h3{font-size:18px;}
+  .pn-chapter>p{font-size:13.2px;color:var(--pn-muted);}
+  .pn-chapter ul{display:grid;gap:8px;margin-top:2px;}
+  .pn-chapter li{
+    font-size:13px;color:#3f4f67;padding-left:15px;position:relative;
+  }
+  .pn-chapter li::before{
+    content:"";position:absolute;left:0;top:9px;width:6px;height:6px;
+    border-radius:2px;background:var(--pn-blue);opacity:.75;
+  }
+
+  /* ===== 作者矩阵（小型头像列表 + 双列简介） ===== */
+  .pn-authors{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;
+  }
+  .pn-author{
+    display:grid;grid-template-columns:56px minmax(0,1fr);gap:15px;
+    background:#fff;border:1px solid var(--pn-line);border-radius:14px;
+    padding:18px;transition:.22s;
+  }
+  .pn-author:hover{border-color:#bfd2f2;box-shadow:0 12px 26px rgba(47,109,246,.09);}
+  .pn-avatar{
+    width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+    font-size:20px;font-weight:800;color:#fff;letter-spacing:1px;flex:none;
+  }
+  .pn-author h4{font-size:15.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .pn-author h4 span{
+    font-size:11px;font-weight:600;color:var(--pn-blue);
+    background:var(--pn-blue-soft);padding:1px 8px;border-radius:99px;
+  }
+  .pn-author-field{font-size:12.5px;color:var(--pn-blue);font-weight:600;letter-spacing:.4px;margin:2px 0 5px;}
+  .pn-author p{font-size:12.8px;color:var(--pn-muted);}
+  .pn-author-nums{display:flex;gap:16px;font-size:12px;color:var(--pn-muted);margin-top:8px;}
+  .pn-author-nums b{color:var(--pn-navy);font-weight:700;}
+  .pn-author-more{
+    margin-top:9px;font-size:12.5px;color:var(--pn-blue);font-weight:600;
+    display:inline-flex;align-items:center;gap:4px;
+  }
+  .pn-author-more:hover{text-decoration:underline;}
+
+  /* ===== 评论（短评列表 + 引用摘录） ===== */
+  .pn-review-wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:26px;align-items:start;}
+  .pn-reviews{display:grid;gap:12px;}
+  .pn-review{
+    background:#fff;border:1px solid var(--pn-line);border-left:4px solid var(--pn-blue);
+    border-radius:10px;padding:15px 18px;
+  }
+  .pn-review:nth-child(2n){border-left-color:var(--pn-coral);}
+  .pn-review-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap;}
+  .pn-review-head b{font-size:13.5px;color:var(--pn-navy);}
+  .pn-review-head span{font-size:11.5px;color:#9aa8bd;}
+  .pn-review p{font-size:13.2px;color:#43536c;}
+  .pn-quote{
+    background:linear-gradient(160deg,#1b2b45,#2b4568);
+    color:#e6eefb;border-radius:var(--pn-radius);padding:26px 26px 24px;
+    box-shadow:0 18px 38px rgba(27,43,69,.2);
+  }
+  .pn-quote .pn-stars{color:#ffc961;letter-spacing:2px;font-size:14px;margin-bottom:10px;}
+  .pn-quote blockquote{margin:0;font-size:16.5px;font-weight:600;line-height:1.7;}
+  .pn-quote footer{margin-top:14px;font-size:12.5px;color:#a9c0e0;}
+  .pn-quote-score{display:flex;align-items:baseline;gap:8px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);}
+  .pn-quote-score b{font-size:34px;font-weight:900;color:#fff;letter-spacing:1px;}
+  .pn-quote-score span{font-size:12.5px;color:#a9c0e0;}
+
+  /* ===== 深度解析（800字以上正文） ===== */
+  .pn-deep{background:#fff;border-top:1px solid var(--pn-line);border-bottom:1px solid var(--pn-line);}
+  .pn-deep-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:38px;align-items:start;}
+  .pn-deep h2{font-size:clamp(24px,3vw,32px);margin-bottom:12px;}
+  .pn-deep-intro{font-size:14.5px;color:var(--pn-muted);}
+  .pn-deep-art{display:grid;gap:22px;}
+  .pn-deep-art article p{font-size:14px;color:#3f4f67;margin-top:8px;}
+  .pn-deep-art article p+p{margin-top:10px;}
+  .pn-deep-art .pn-h3{color:var(--pn-blue);}
+  .pn-deep-stats{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;
+    margin-top:20px;
+  }
+  .pn-deep-stats div{
+    background:#f5f8fd;border:1px solid var(--pn-line);border-radius:12px;
+    padding:14px;text-align:center;
+  }
+  .pn-deep-stats b{display:block;font-size:22px;font-weight:800;color:var(--pn-navy);}
+  .pn-deep-stats span{font-size:11.5px;color:var(--pn-muted);}
+
+  /* ===== FAQ ===== */
+  .pn-faq{display:grid;gap:10px;max-width:900px;}
+  .pn-faq details{
+    background:#fff;border:1px solid var(--pn-line);border-radius:12px;
+    padding:0 18px;transition:.2s;
+  }
+  .pn-faq details[open]{border-color:#bdd1f0;box-shadow:0 10px 24px rgba(47,109,246,.08);}
+  .pn-faq summary{
+    font-size:14.5px;font-weight:600;color:var(--pn-navy);
+    padding:15px 0;cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;gap:14px;align-items:center;
+  }
+  .pn-faq summary::-webkit-details-marker{display:none;}
+  .pn-faq summary::after{content:"+";font-size:20px;color:var(--pn-blue);font-weight:400;line-height:1;}
+  .pn-faq details[open] summary::after{content:"–";}
+  .pn-faq details p{font-size:13.3px;color:var(--pn-muted);padding:0 0 16px;}
+
+  /* ===== 动态 / 合作 ===== */
+  .pn-split{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:26px;align-items:start;}
+  .pn-updates{display:grid;gap:12px;}
+  .pn-update{
+    display:grid;grid-template-columns:78px minmax(0,1fr);gap:14px;
+    background:#fff;border:1px solid var(--pn-line);border-radius:12px;padding:15px 17px;
+  }
+  .pn-update time{font-size:12px;color:var(--pn-blue);font-weight:700;letter-spacing:.4px;}
+  .pn-update h4{font-size:14.5px;margin-bottom:3px;}
+  .pn-update p{font-size:12.8px;color:var(--pn-muted);}
+  .pn-partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .pn-partner{
+    background:#fff;border:1px solid var(--pn-line);border-radius:12px;
+    padding:16px;display:flex;align-items:center;gap:11px;
+  }
+  .pn-partner-dot{width:34px;height:34px;border-radius:9px;flex:none;display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;}
+  .pn-partner b{font-size:13.5px;display:block;color:var(--pn-navy);}
+  .pn-partner span{font-size:11.5px;color:var(--pn-muted);}
+
+  /* ===== 投稿入口 ===== */
+  .pn-submit{
+    margin-top:26px;background:linear-gradient(120deg,#eaf1ff,#f6f9ff);
+    border:1px solid #cfdffa;border-radius:var(--pn-radius);
+    padding:26px 28px;display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  }
+  .pn-submit h3{font-size:20px;margin-bottom:5px;}
+  .pn-submit p{font-size:13.5px;color:var(--pn-muted);max-width:60ch;}
+
+  /* ===== 页脚 ===== */
+  .pn-footer{background:var(--pn-navy);color:#b9c9e0;padding:52px 0 0;margin-top:0;}
+  .pn-footer-grid{display:grid;grid-template-columns:minmax(0,5fr) repeat(3,minmax(0,3fr));gap:30px;padding-bottom:34px;}
+  .pn-footer h5{color:#fff;font-size:14px;margin:0 0 12px;font-weight:700;letter-spacing:.6px;}
+  .pn-footer p{font-size:13px;color:#a9bcd8;line-height:1.85;}
+  .pn-footer li{margin-bottom:8px;font-size:13px;color:#a9bcd8;}
+  .pn-footer li a:hover{color:#fff;}
+  .pn-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .pn-footer-brand .pn-brand-mark{width:36px;height:36px;border-radius:10px;}
+  .pn-footer-brand b{color:#fff;font-size:17px;letter-spacing:1px;}
+  .pn-footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);padding:18px 0;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-size:12px;color:#8ea6c8;
+  }
+
+  /* ===== 弹窗 / Toast ===== */
+  .pn-modal{
+    position:fixed;inset:0;z-index:200;display:none;
+    background:rgba(15,25,40,.55);backdrop-filter:blur(3px);
+    padding:24px;overflow:auto;
+  }
+  .pn-modal.show{display:flex;align-items:center;justify-content:center;}
+  .pn-modal-box{
+    background:#fff;border-radius:18px;width:min(560px,100%);
+    padding:26px 26px 24px;box-shadow:0 30px 70px rgba(0,0,0,.3);
+    animation:pn-pop .22s ease;
+  }
+  @keyframes pn-pop{from{transform:translateY(14px);opacity:.4}to{transform:none;opacity:1}}
+  .pn-modal-box h3{font-size:19px;margin-bottom:6px;}
+  .pn-modal-box p{font-size:13.3px;color:var(--pn-muted);margin-bottom:14px;}
+  .pn-modal-box textarea,.pn-modal-box input{
+    width:100%;border:1px solid var(--pn-line);border-radius:10px;
+    padding:10px 13px;font-size:13.5px;font-family:inherit;outline:none;margin-bottom:10px;
+    background:#f8faff;color:var(--pn-ink);
+  }
+  .pn-modal-box textarea{min-height:96px;resize:vertical;}
+  .pn-modal-box textarea:focus,.pn-modal-box input:focus{border-color:var(--pn-blue);background:#fff;}
+  .pn-modal-foot{display:flex;justify-content:flex-end;gap:10px;margin-top:6px;}
+  .pn-modal-close{
+    position:absolute;top:14px;right:16px;width:32px;height:32px;border-radius:50%;
+    display:grid;place-items:center;color:#8395ae;font-size:18px;
+  }
+  .pn-modal-inner{position:relative;}
+  .pn-toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+    background:var(--pn-navy);color:#fff;font-size:13.5px;
+    padding:11px 22px;border-radius:99px;z-index:300;
+    opacity:0;pointer-events:none;transition:.28s;
+    box-shadow:0 14px 34px rgba(0,0,0,.24);
+  }
+  .pn-toast.show{opacity:1;transform:translate(-50%,0);}
+
+  .pn-totop{
+    position:fixed;right:22px;bottom:26px;z-index:120;
+    width:46px;height:46px;border-radius:50%;background:#fff;
+    border:1px solid var(--pn-line);box-shadow:0 10px 24px rgba(27,43,69,.16);
+    display:grid;place-items:center;color:var(--pn-navy);
+    opacity:0;pointer-events:none;transition:.25s;
+  }
+  .pn-totop.show{opacity:1;pointer-events:auto;}
+  .pn-totop:hover{background:var(--pn-navy);color:#fff;border-color:var(--pn-navy);}
+  .pn-totop svg{width:18px;height:18px;fill:currentColor;}
+
+  /* ===== 响应式 ===== */
+  @media (max-width:1024px){
+    .pn-hero-in{grid-template-columns:1fr;gap:30px;padding:40px 0 46px;}
+    .pn-focus-grid,.pn-review-wrap,.pn-deep-grid,.pn-split{grid-template-columns:1fr;}
+    .pn-chapters{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .pn-footer-grid{grid-template-columns:1fr 1fr;}
+    .pn-nav{display:none;}
+    .pn-header-in{flex-wrap:wrap;gap:12px;}
+    .pn-burger{display:grid;margin-left:auto;}
+    .pn-header-tools{margin-left:auto;}
+    .pn-nav.open{
+      display:flex;flex-direction:column;align-items:stretch;
+      order:9;flex-basis:100%;gap:2px;padding-bottom:10px;
+    }
+    .pn-nav.open a{padding:10px 12px;border-radius:9px;}
+  }
+  @media (max-width:760px){
+    :root{--pn-head-h:150px;}
+    .pn-topbar-txt{white-space:normal;line-height:1.5;}
+    .pn-topbar-more{display:none;}
+    .pn-search input{width:132px;}
+    .pn-search input:focus{width:150px;}
+    .pn-video-cols,.pn-authors,.pn-chapters,.pn-partners{grid-template-columns:1fr;}
+    .pn-vrow{grid-template-columns:34px minmax(0,1fr);}
+    .pn-vrow-actions{grid-column:2;justify-content:flex-start;}
+    .pn-deep-stats{grid-template-columns:1fr 1fr;}
+    .pn-hero-stats{gap:10px;}
+    .pn-stat{min-width:96px;padding:9px 13px;}
+    .pn-footer-grid{grid-template-columns:1fr;}
+    .pn-sec{padding:46px 0;}
+    .pn-submit{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="pn-topbar">
+  <div class="pn-wrap pn-topbar-in">
+    <span class="pn-topbar-badge">官方发布</span>
+    <span class="pn-topbar-txt"><b>新增「城市夜色·纪实影像企划」</b> 首批 6 部正版高清短片已上线，同步开放创作者报名通道；<b>社区话题 #我的拍摄笔记#</b> 本周更新 42 条投稿。</span>
+    <a class="pn-topbar-more" href="#pn-updates">查看动态 →</a>
+  </div>
+</div>
+
+<header class="pn-header">
+  <div class="pn-wrap pn-header-in">
+    <a class="pn-brand" href="#pn-hero">
+      <span class="pn-brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg>
+      </span>
+      <span>
+        <span class="pn-brand-name">朴妮唛</span>
+        <span class="pn-brand-sub">PU NI MAI · 视频品牌门户</span>
+      </span>
+    </a>
+    <nav class="pn-nav" id="pnNav" aria-label="主导航">
+      <a href="#pn-focus">焦点内容</a>
+      <a href="#pn-videos">视频精选</a>
+      <a href="#pn-chapters">专题企划</a>
+      <a href="#pn-authors">创作者</a>
+      <a href="#pn-deep">品牌深度</a>
+      <a href="#pn-reviews">社区口碑</a>
+      <a href="#pn-faq">帮助中心</a>
+    </nav>
+    <div class="pn-header-tools">
+      <div class="pn-search">
+        <input type="search" id="pnSearch" placeholder="搜索内容 / 创作者" aria-label="站内搜索">
+        <button class="pn-search-btn" id="pnSearchBtn" aria-label="搜索">
+          <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 105.29 14.29l4.35 4.35 1.41-1.41-4.35-4.35A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+        </button>
+      </div>
+      <button class="pn-btn-primary" id="pnSubmitOpen">我要投稿</button>
+      <button class="pn-burger" id="pnBurger" aria-label="展开导航" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- S2 品牌首屏 -->
+<section class="pn-hero" id="pn-hero">
+  <div class="pn-wrap pn-hero-in">
+    <div>
+      <span class="pn-hero-kicker"><i></i>官方网站 · 原创正版高清视频</span>
+      <h1>朴妮唛</h1>
+      <p class="pn-hero-slogan">让每一次真实记录，都成为值得被看见的力量</p>
+      <p class="pn-hero-lead">
+        朴妮唛官方网站是一家深耕原创视频内容生态的企业级视频品牌。我们以「记录真实、陪伴成长」为初心，为创作者提供专业的发布、分发与社区运营能力，为用户提供高清、正版、多元的精品内容，让认真做内容的人被更多人看见。
+      </p>
+      <div class="pn-hero-stats">
+        <div class="pn-stat"><b>12,860+</b><span>原创视频作品</span></div>
+        <div class="pn-stat"><b>3,240+</b><span>入驻创作者</span></div>
+        <div class="pn-stat"><b>9.4 分</b><span>社区口碑评分</span></div>
+      </div>
+      <div class="pn-hero-cta">
+        <a class="pn-btn-primary" href="#pn-videos">观看精选内容</a>
+        <a class="pn-btn-ghost" href="#pn-authors">认识创作者</a>
+        <a class="pn-btn-ghost" href="#pn-deep">了解品牌故事</a>
+      </div>
+    </div>
+    <div class="pn-hero-visual">
+      <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f1b2e'/%3E%3Cstop offset='.55' stop-color='%231b3358'/%3E%3Cstop offset='1' stop-color='%232f6df6'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff5a5f'/%3E%3Cstop offset='1' stop-color='%23ffb199'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g1)'/%3E%3Ccircle cx='610' cy='150' r='110' fill='%23ff5a5f' opacity='.28'/%3E%3Ccircle cx='640' cy='150' r='70' fill='url(%23g2)' opacity='.85'/%3E%3Cpath d='M0 470 Q160 380 320 452 T800 400 L800 600 L0 600 Z' fill='%230d1930' opacity='.85'/%3E%3Cpath d='M0 512 Q200 430 400 498 T800 462 L800 600 L0 600 Z' fill='%230a1426'/%3E%3Cg opacity='.9'%3E%3Crect x='120' y='120' width='250' height='150' rx='14' fill='%23ffffff' opacity='.1'/%3E%3Crect x='138' y='140' width='150' height='10' rx='5' fill='%23ffffff' opacity='.5'/%3E%3Crect x='138' y='162' width='200' height='8' rx='4' fill='%23ffffff' opacity='.26'/%3E%3Crect x='138' y='180' width='170' height='8' rx='4' fill='%23ffffff' opacity='.26'/%3E%3Crect x='138' y='216' width='76' height='24' rx='12' fill='%23ff5a5f'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='300' cy='390' r='52' fill='%23ffffff' opacity='.14'/%3E%3Cpath d='M285 366l42 24-42 24z' fill='%23ffffff' opacity='.9'/%3E%3C/g%3E%3Cg opacity='.55'%3E%3Crect x='420' y='300' width='280' height='150' rx='16' fill='%23ffffff' opacity='.07'/%3E%3Crect x='440' y='320' width='110' height='9' rx='4' fill='%23ffffff' opacity='.5'/%3E%3Crect x='440' y='340' width='200' height='7' rx='3' fill='%23ffffff' opacity='.24'/%3E%3Crect x='440' y='356' width='170' height='7' rx='3' fill='%23ffffff' opacity='.24'/%3E%3Crect x='440' y='400' width='120' height='26' rx='13' fill='%232f6df6'/%3E%3C/g%3E%3C/svg%3E" alt="朴妮唛品牌主视觉：深蓝色影像画面与播放标识构成的首屏大图" width="800" height="600">
+      <div class="pn-hero-tag">
+        <span class="pn-playdot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+        <span>本周官方首推 ·《夜色里的三段独白》高清正片已上线</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 焦点内容 -->
+<section class="pn-sec" id="pn-focus">
+  <div class="pn-wrap">
+    <div class="pn-sec-head">
+      <span class="pn-sec-kicker">FOCUS · 焦点推荐</span>
+      <h2>今日焦点：朴妮唛官方编辑部选出的重点内容</h2>
+      <p>每一期焦点内容都由官方编辑部与社区评审共同选出，坚持原创、正版与高清标准，呈现多元而真实的影像表达。</p>
+    </div>
+    <div class="pn-focus-grid">
+      <article class="pn-focus-main">
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='fg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2312243f'/%3E%3Cstop offset='1' stop-color='%23345f9e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23fg)'/%3E%3Ccircle cx='660' cy='90' r='120' fill='%23ff5a5f' opacity='.22'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.18'%3E%3Cpath d='M0 380 L180 300 L340 350 L520 250 L700 320 L800 280' fill='none' stroke-width='2'/%3E%3C/g%3E%3Cg%3E%3Crect x='70' y='90' width='150' height='200' rx='12' fill='%23ffffff' opacity='.12'/%3E%3Crect x='240' y='140' width='150' height='150' rx='12' fill='%23ff5a5f' opacity='.55'/%3E%3Crect x='410' y='110' width='150' height='180' rx='12' fill='%23ffffff' opacity='.16'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.7'%3E%3Crect x='88' y='110' width='80' height='8' rx='4'/%3E%3Crect x='88' y='130' width='110' height='6' rx='3'/%3E%3Crect x='428' y='130' width='90' height='8' rx='4'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='320' cy='215' r='26' fill='%23ffffff' opacity='.9'/%3E%3Cpath d='M312 203l20 12-20 12z' fill='%2312243f'/%3E%3C/g%3E%3C/svg%3E" alt="焦点视频《夜色里的三段独白》封面：深蓝画面与三段并列影像片段" width="800" height="450">
+        <div class="pn-focus-main-body">
+          <div class="pn-tags">
+            <span class="pn-tag">官方首推</span>
+            <span class="pn-tag coral">城市探索</span>
+            <span class="pn-tag navy">纪实影像</span>
+          </div>
+          <h3>夜色里的三段独白：城市探索影像企划第一期</h3>
+          <p>用三个普通人的夜晚串联起一座城市的气质：夜班公交司机、深夜面包房主理人、天台练琴的高中生。全片以自然光与实录声音为主，保留了真实的呼吸与停顿，是朴妮唛官方网站本期最受关注的原创高清作品。</p>
+          <div class="pn-meta">
+            <span>创作者 <b>@南桥影像</b></span>
+            <span>播放 <b class="pn-num">18.6万</b></span>
+            <span>点赞 <b class="pn-num">2.4万</b></span>
+            <span>收藏 <b class="pn-num">9,180</b></span>
+          </div>
+        </div>
+      </article>
+      <div class="pn-list-side">
+        <article class="pn-list-item">
+          <h4>把一间老式面包房拍成一部微纪录片</h4>
+          <p>从灯光布置到人物沟通，完整分享一次小店纪录片的拍摄流程。</p>
+          <div class="pn-meta"><span>@烤箱前的手</span><span>播放 7.2万</span></div>
+        </article>
+        <article class="pn-list-item">
+          <h4>手机也能拍出电影感：5个自然光构图技巧</h4>
+          <p>不依赖器材，靠机位与光线完成质感的提升。</p>
+          <div class="pn-meta"><span>@一格工作室</span><span>播放 5.9万</span></div>
+        </article>
+        <article class="pn-list-item">
+          <h4>创作者对谈：我们为什么坚持做长视频</h4>
+          <p>三位创作者聊节奏、耐心与内容沉淀的价值。</p>
+          <div class="pn-meta"><span>@朴妮唛编辑部</span><span>播放 4.1万</span></div>
+        </article>
+        <article class="pn-list-item">
+          <h4>剪辑节奏训练：让观众不划走的90秒结构</h4>
+          <p>拆解三类高完播率开场，附可复用脚本模板。</p>
+          <div class="pn-meta"><span>@剪辑台前的阿岩</span><span>播放 3.6万</span></div>
+        </article>
+        <article class="pn-list-item">
+          <h4>在地文化：一条老街的十二个招牌</h4>
+          <p>用镜头记录老街商户的字体、颜色与叫卖声。</p>
+          <div class="pn-meta"><span>@街角取样</span><span>播放 2.8万</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 视频精选 -->
+<section class="pn-sec alt" id="pn-videos">
+  <div class="pn-wrap">
+    <div class="pn-sec-head">
+      <span class="pn-sec-kicker">VIDEO · 视频精选</span>
+      <h2>朴妮唛精品内容：两列重点作品与文字索引</h2>
+      <p>平台坚持正版高清与原创优先，重点作品配封面，更多内容以文字索引形式呈现，方便快速浏览与收藏。</p>
+    </div>
+
+    <div class="pn-video-cols">
+      <article class="pn-video-card">
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8a5b'/%3E%3Cstop offset='1' stop-color='%23ffcf8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23v1)'/%3E%3Ccircle cx='640' cy='330' r='150' fill='%23ffffff' opacity='.25'/%3E%3Cg fill='%23ffffff' opacity='.9'%3E%3Crect x='80' y='280' width='90' height='90' rx='10'/%3E%3Crect x='190' y='230' width='90' height='140' rx='10'/%3E%3Crect x='300' y='190' width='90' height='180' rx='10'/%3E%3C/g%3E%3Cg fill='%232a1a10' opacity='.55'%3E%3Crect x='98' y='300' width='52' height='7' rx='3'/%3E%3Crect x='208' y='250' width='52' height='7' rx='3'/%3E%3Crect x='318' y='210' width='52' height='7' rx='3'/%3E%3C/g%3E%3Ccircle cx='450' cy='130' r='46' fill='%23ffffff' opacity='.85'/%3E%3Cpath d='M440 112l26 18-26 18z' fill='%23d8722f'/%3E%3C/svg%3E" alt="视频《一顿晚饭的三小时》封面：暖橙色厨房与三段食材剪辑" width="800" height="450">
+        <div class="pn-video-card-body">
+          <div class="pn-tags"><span class="pn-tag">生活记录</span><span class="pn-tag navy">治愈影像</span></div>
+          <h4>一顿晚饭的三小时：厨房里的慢节奏</h4>
+          <p>把备菜、炖煮与出锅拍成一条完整的时间线，没有加速，也没有配乐，只保留真实的声音。</p>
+          <div class="pn-meta">
+            <span>@小满的灶台</span>
+            <span>播放 <b>12.3万</b></span>
+            <span class="pn-like-btn" data-count="8620">
+              <button class="pn-iconbtn" type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.7-9.3-9.1C1.4 8.4 3.6 5 7 5c2 0 3.4 1.2 5 3 1.6-1.8 3-3 5-3 3.4 0 5.6 3.4 4.3 6.9C19.5 16.3 12 21 12 21z"/></svg>
+              </button>
+              <span class="pn-count">8,620</span>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pn-video-card">
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='v2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233d7f6a'/%3E%3Cstop offset='1' stop-color='%23a9d5b8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23v2)'/%3E%3Cpath d='M0 360 Q140 300 300 342 T800 320 L800 450 L0 450 Z' fill='%231f4a3a' opacity='.55'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.55' fill='none' stroke-width='3'%3E%3Cpath d='M120 330 L120 180 Q120 140 160 140'/%3E%3Cpath d='M240 330 L240 160 Q240 120 280 120'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.7'%3E%3Ccircle cx='160' cy='140' r='16'/%3E%3Ccircle cx='280' cy='120' r='16'/%3E%3C/g%3E%3Crect x='420' y='150' width='300' height='170' rx='14' fill='%23ffffff' opacity='.18'/%3E%3Crect x='442' y='172' width='120' height='10' rx='5' fill='%23ffffff' opacity='.8'/%3E%3Crect x='442' y='196' width='230' height='8' rx='4' fill='%23ffffff' opacity='.5'/%3E%3Crect x='442' y='216' width='190' height='8' rx='4' fill='%23ffffff' opacity='.5'/%3E%3Crect x='442' y='266' width='100' height='26' rx='13' fill='%23ffffff' opacity='.8'/%3E%3C/svg%3E" alt="视频《把阳台变成小森林》封面：自然绿色阳台与攀爬植物线条插画" width="800" height="450">
+        <div class="pn-video-card-body">
+          <div class="pn-tags"><span class="pn-tag">家居收纳</span><span class="pn-tag navy">实用技巧</span></div>
+          <h4>把阳台变成小森林：六个月改造全记录</h4>
+          <p>从测量、选土到植物搭配，完整记录一次可持续的阳台改造，附上适合新手的低维护植物清单。</p>
+          <div class="pn-meta">
+            <span>@十二平阳台</span>
+            <span>播放 <b>9.6万</b></span>
+            <span class="pn-like-btn" data-count="6340">
+              <button class="pn-iconbtn" type="button" aria-label="点赞">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.7-9.3-9.1C1.4 8.4 3.6 5 7 5c2 0 3.4 1.2 5 3 1.6-1.8 3-3 5-3 3.4 0 5.6 3.4 4.3 6.9C19.5 16.3 12 21 12 21z"/></svg>
+              </button>
+              <span class="pn-count">6,340</span>
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="pn-video-rows">
+      <div class="pn-vrow">
+        <span class="pn-vrow-idx">01</span>
+        <div class="pn-vrow-main">
+          <h4>三分钟讲清一个剪辑术语：跳切与匹配剪辑</h4>
+          <p>@剪辑台前的阿岩 · 教程干货 · 播放 6.8万 · 收藏 4,120 · 适合新手的第一节剪辑课</p>
+        </div>
+        <div class="pn-vrow-actions">
+          <button class="pn-iconbtn pn-fav-btn" type="button" aria-label="收藏">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+          </button>
+          <button class="pn-iconbtn pn-copy-btn" type="button" aria-label="复制链接">
+            <svg viewBox="0 0 24 24"><path d="M10 3H6a3 3 0 00-3 3v4h2V6a1 1 0 011-1h4zM14 3h4a3 3 0 013 3v4h-2V6a1 1 0 00-1-1h-4zM3 14v4a3 3 0 003 3h4v-2H6a1 1 0 01-1-1v-4zm18 0h-2v4a1 1 0 01-1 1h-4v2h4a3 3 0 003-3z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="pn-vrow">
+        <span class="pn-vrow-idx">02</span>
+        <div class="pn-vrow-main">
+          <h4>访谈：从素人到稳定更新，我用了两年</h4>
+          <p>@朴妮唛编辑部 · 人物访谈 · 播放 5.4万 · 收藏 3,050 · 聊聊更新节奏与自我怀疑</p>
+        </div>
+        <div class="pn-vrow-actions">
+          <button class="pn-iconbtn pn-fav-btn" type="button" aria-label="收藏">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+          </button>
+          <button class="pn-iconbtn pn-copy-btn" type="button" aria-label="复制链接">
+            <svg viewBox="0 0 24 24"><path d="M10 3H6a3 3 0 00-3 3v4h2V6a1 1 0 011-1h4zM14 3h4a3 3 0 013 3v4h-2V6a1 1 0 00-1-1h-4zM3 14v4a3 3 0 003 3h4v-2H6a1 1 0 01-1-1v-4zm18 0h-2v4a1 1 0 01-1 1h-4v2h4a3 3 0 003-3z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="pn-vrow">
+        <span class="pn-vrow-idx">03</span>
+        <div class="pn-vrow-main">
+          <h4>一次真实的搬家记录：我扔掉了三分之二的东西</h4>
+          <p>@周末不加班 · 日常记录 · 播放 4.7万 · 收藏 2,780 · 关于极简与取舍的影像手记</p>
+        </div>
+        <div class="pn-vrow-actions">
+          <button class="pn-iconbtn pn-fav-btn" type="button" aria-label="收藏">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+          </button>
+          <button class="pn-iconbtn pn-copy-btn" type="button" aria-label="复制链接">
+            <svg viewBox="0 0 24 24"><path d="M10 3H6a3 3 0 00-3 3v4h2V6a1 1 0 011-1h4zM14 3h4a3 3 0 013 3v4h-2V6a1 1 0 00-1-1h-4zM3 14v4a3 3 0 003 3h4v-2H6a1 1 0 01-1-1v-4zm18 0h-2v4a1 1 0 01-1 1h-4v2h4a3 3 0 003-3z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="pn-vrow">
+        <span class="pn-vrow-idx">04</span>
+        <div class="pn-vrow-main">
+          <h4>城市探索：从菜市场开始的早餐地图</h4>
+          <p>@街角取样 · 城市探索 · 播放 4.2万 · 收藏 2,410 · 记录五家开了十年以上的早餐摊</p>
+        </div>
+        <div class="pn-vrow-actions">
+          <button class="pn-iconbtn pn-fav-btn" type="button" aria-label="收藏">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+          </button>
+          <button class="pn-iconbtn pn-copy-btn" type="button" aria-label="复制链接">
+            <svg viewBox="0 0 24 24"><path d="M10 3H6a3 3 0 00-3 3v4h2V6a1 1 0 011-1h4zM14 3h4a3 3 0 013 3v4h-2V6a1 1 0 00-1-1h-4zM3 14v4a3 3 0 003 3h4v-2H6a1 1 0 01-1-1v-4zm18 0h-2v4a1 1 0 01-1 1h-4v2h4a3 3 0 003-3z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="pn-vrow">
+        <span class="pn-vrow-idx">05</span>
+        <div class="pn-vrow-main">
+          <h4>萌宠日常：一只猫的午后观察日记</h4>
+          <p>@三花与橘 · 萌宠日常 · 播放 3.9万 · 收藏 2,190 · 用固定机位拍足一整个下午</p>
+        </div>
+        <div class="pn-vrow-actions">
+          <button class="pn-iconbtn pn-fav-btn" type="button" aria-label="收藏">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+          </button>
+          <button class="pn-iconbtn pn-copy-btn" type="button" aria-label="复制链接">
+            <svg viewBox="0 0 24 24"><path d="M10 3H6a3 3 0 00-3 3v4h2V6a1 1 0 011-1h4zM14 3h4a3 3 0 013 3v4h-2V6a1 1 0 00-1-1h-4zM3 14v4a3 3 0 003 3h4v-2H6a1 1 0 01-1-1v-4zm18 0h-2v4a1 1 0 01-1 1h-4v2h4a3 3 0 003-3z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S4 专题企划 -->
+<section class="pn-sec" id="pn-chapters">
+  <div class="pn-wrap">
+    <div class="pn-sec-head">
+      <span class="pn-sec-kicker">PROGRAM · 专题企划</span>
+      <h2>朴妮唛专题企划：持续运营的原创内容项目</h2>
+      <p>专题由官方发起、创作者共建，围绕真实生活与行业观察展开，每个专题持续更新，欢迎社区共同参与。</p>
+    </div>
+    <div class="pn-chapters">
+      <article class="pn-chapter">
+        <span class="pn-chapter-status ing">连载中 · 第 3 期</span>
+        <h3>夜色里的城市·纪实企划</h3>
+        <p>记录夜间工作者的真实状态，用影像留存一座城市不被注意的那一面。</p>
+        <ul>
+          <li>《夜班公交的三站路》——司机陈师傅的十年夜路</li>
+          <li>《凌晨四点的面包房》——发酵箱旁的等待</li>
+          <li>《天台练琴的人》——高中生的十二首练习曲</li>
+        </ul>
+      </article>
+      <article class="pn-chapter">
+        <span class="pn-chapter-status">已完结 · 共 5 期</span>
+        <h3>一间房子的改造课</h3>
+        <p>从硬装到软装，用五期内容讲清普通家庭真正用得上的改造思路。</p>
+        <ul>
+          <li>《预算怎么分：三个家庭的对照表》</li>
+          <li>《收纳不是买盒子：动线与习惯》</li>
+          <li>《光线改造：三种常见的补光方案》</li>
+        </ul>
+      </article>
+      <article class="pn-chapter">
+        <span class="pn-chapter-status ing">征集中 · 报名开放</span>
+        <h3>创作者的第一次</h3>
+        <p>邀请创作者讲述自己第一部作品背后的故事，呈现创作的真实起点。</p>
+        <ul>
+          <li>《第一次按下录制键时我在发抖》</li>
+          <li>《那条只有 37 次播放的视频》</li>
+          <li>《我把作品给家人看的那一晚》</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S5 创作者矩阵 -->
+<section class="pn-sec alt" id="pn-authors">
+  <div class="pn-wrap">
+    <div class="pn-sec-head">
+      <span class="pn-sec-kicker">CREATORS · 创作者矩阵</span>
+      <h2>朴妮唛社区创作者：他们构成了平台的内容生态</h2>
+      <p>平台长期扶持原创与垂直领域创作者，以下为官方认证的核心创作者，内容覆盖纪实、教程、生活与访谈等方向。</p>
+    </div>
+    <div class="pn-authors">
+      <article class="pn-author">
+        <span class="pn-avatar" style="background:linear-gradient(135deg,#2f6df6,#1b2b45)">南</span>
+        <div>
+          <h4>@南桥影像 <span>官方认证</span></h4>
+          <p class="pn-author-field">纪实影像 · 城市观察</p>
+          <p>拍摄城市与人的关系已有七年，习惯在同一个街角等待合适的光。作品节奏克制，重视现场声音与真实对话，主张纪录片应该先尊重被拍摄的人，再谈表达。</p>
+          <div class="pn-author-nums"><span>作品 <b>86</b></span><span>粉丝 <b>12.4万</b></span></div>
+          <a class="pn-author-more" href="#pn-authors">查看档案 →</a>
+        </div>
+      </article>
+      <article class="pn-author">
+        <span class="pn-avatar" style="background:linear-gradient(135deg,#ff5a5f,#ffb199)">小</span>
+        <div>
+          <h4>@小满的灶台 <span>官方认证</span></h4>
+          <p class="pn-author-field">美食烹饪 · 生活记录</p>
+          <p>家中厨房就是全部拍摄场地。喜欢用一镜到底呈现做饭的完整过程，不做加速，也不加花哨配乐。她相信烟火气本身就是最好的画面，慢一点反而更能留住味道。</p>
+          <div class="pn-author-nums"><span>作品 <b>142</b></span><span>粉丝 <b>18.9万</b></span></div>
+          <a class="pn-author-more" href="#pn-authors">查看档案 →</a>
+        </div>
+      </article>
+      <article class="pn-author">
+        <span class="pn-avatar" style="background:linear-gradient(135deg,#1f8a4c,#a9d5b8)">岩</span>
+        <div>
+          <h4>@剪辑台前的阿岩 <span>教程作者</span></h4>
+          <p class="pn-author-field">教程干货 · 创作幕后</p>
+          <p>十年剪辑师，做过广告也做过纪录片。擅长把复杂的软件操作拆成可执行的小步骤，课程强调结构思维而非炫技。他说剪辑的本质是帮观众省下耐心。</p>
+          <div class="pn-author-nums"><span>作品 <b>210</b></span><span>粉丝 <b>15.2万</b></span></div>
+          <a class="pn-author-more" href="#pn-authors">查看档案 →</a>
+        </div>
+      </article>
+      <article class="pn-author">
+        <span class="pn-avatar" style="background:linear-gradient(135deg,#7a5af8,#c3b4ff)">拾</span>
+        <div>
+          <h4>@街角取样 <span>新锐创作者</span></h4>
+          <p class="pn-author-field">在地文化 · 城市探索</p>
+          <p>走访城市里正在消失的老店与手艺，用镜头保存招牌、叫卖声和一份份手写价目表。她认为城市记忆不该只存在于照片里，声音同样值得被收藏。</p>
+          <div class="pn-author-nums"><span>作品 <b>54</b></span><span>粉丝 <b>6.7万</b></span></div>
+          <a class="pn-author-more" href="#pn-authors">查看档案 →</a>
+        </div>
+      </article>
+      <article class="pn-author">
+        <span class="pn-avatar" style="background:linear-gradient(135deg,#b5741a,#ffcf8a)">十</span>
+        <div>
+          <h4>@十二平阳台 <span>官方认证</span></h4>
+          <p class="pn-author-field">家居收纳 · 实用技巧</p>
+          <p>住在小户型的普通上班族，把阳台改造成小森林用了整整半年。内容偏实用，所有清单都亲自试过，不合适的方法会明确说明原因，不推荐自己没验证过的产品。</p>
+          <div class="pn-author-nums"><span>作品 <b>73</b></span><span>粉丝 <b>9.8万</b></span></div>
+          <a class="pn-author-more" href="#pn-authors">查看档案 →</a>
+        </div>
+      </article>
+      <article class="pn-author">
+        <span class="pn-avatar" style="background:linear-gradient(135deg,#0f766e,#5eead4)">周</span>
+        <div>
+          <h4>@周末不加班 <span>新锐创作者</span></h4>
+          <p class="pn-author-field">日常记录 · 职场日常</p>
+          <p>用影像记录普通工作日与周末之间的差别。作品多为短篇幅随笔式记录，画面朴素，擅长从琐碎日常里找到情绪落点，被社区称为“最像自己的创作者”。</p>
+          <div class="pn-author-nums"><span>作品 <b>61</b></span><span>粉丝 <b>5.4万</b></span></div>
+          <a class="pn-author-more" href="#pn-authors">查看档案 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S6 品牌深度解析（≥800字） -->
+<section class="pn-sec pn-deep" id="pn-deep">
+  <div class="pn-wrap">
+    <div class="pn-deep-grid">
+      <div>
+        <span class="pn-sec-kicker">BRAND · 品牌解读</span>
+        <h2>关于朴妮唛：一个视频品牌如何理解内容与社区</h2>
+        <p class="pn-deep-intro">从一件小事开始，我们把对影像的认真，做成了可以持续运营的内容生态。</p>
+        <div class="pn-deep-stats">
+          <div><b>12,860+</b><span>原创作品</span></div>
+          <div><b>3,240+</b><span>入驻创作者</span></div>
+          <div><b>98.2%</b><span>内容正版率</span></div>
+        </div>
+        <img style="margin-top:22px;border-radius:14px;border:1px solid var(--pn-line);" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 400'%3E%3Cdefs%3E%3ClinearGradient id='dg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23eef4ff'/%3E%3Cstop offset='1' stop-color='%23cfe0ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='720' height='400' fill='url(%23dg)'/%3E%3Cg stroke='%232f6df6' stroke-opacity='.35' fill='none' stroke-width='2'%3E%3Cpath d='M80 320 L200 250 L320 280 L440 190 L560 230 L660 170'/%3E%3C/g%3E%3Cg fill='%232f6df6'%3E%3Ccircle cx='200' cy='250' r='7'/%3E%3Ccircle cx='320' cy='280' r='7'/%3E%3Ccircle cx='440' cy='190' r='7'/%3E%3Ccircle cx='560' cy='230' r='7'/%3E%3C/g%3E%3Cg fill='%231b2b45' opacity='.75'%3E%3Crect x='86' y='86' width='160' height='10' rx='5'/%3E%3Crect x='86' y='110' width='230' height='8' rx='4' opacity='.5'/%3E%3Crect x='86' y='130' width='190' height='8' rx='4' opacity='.5'/%3E%3C/g%3E%3Cg fill='%23ff5a5f' opacity='.85'%3E%3Crect x='480' y='300' width='110' height='30' rx='15'/%3E%3C/g%3E%3C/svg%3E" alt="朴妮唛品牌解读配图：内容生态成长曲线与数据示意" width="720" height="400">
+      </div>
+      <div class="pn-deep-art">
+        <article>
+          <h3 class="pn-h3">一、为什么朴妮唛要做“慢一点”的视频社区</h3>
+          <p>朴妮唛官方网站的起点，是编辑部内部一份很短的文档：如果所有平台都在争夺前三秒，那愿意花十分钟看完一个故事的人，应该去哪里？这个问题我们讨论了半年，最后决定自己做一个地方。这个地方不追求最快的信息流，而是把注意力放在完播与收藏上，把“看完”当作比“刷到”更重要的指标。</p>
+          <p>因此在产品设计上，朴妮唛没有做无限下拉的推荐瀑布，而是以专题与栏目为单位组织内容。用户进入首页，看到的是经过编辑与社区共同筛选的焦点内容，而不是一堆算法猜测。我们希望每一次打开，都不是被推着走，而是主动选择。这样的节奏，让创作者也有机会用更完整的方式讲完一件事。</p>
+          <p>这种选择是有代价的。内容供给会变慢，审核成本会变高，运营团队需要投入大量人力做专题策划与创作者沟通。但正如社区里一位创作者所说，慢并不是效率低，而是把时间放在更值得的地方。这句话后来被写进了我们的内容准则里，也成为朴妮唛区别于其他视频平台的核心气质。</p>
+        </article>
+        <article>
+          <h3 class="pn-h3">二、原创正版高清，是内容生态的底线而非卖点</h3>
+          <p>作为一个视频品牌，朴妮唛对“原创、正版、高清”这三件事的要求近乎固执。所有上传内容都需经过原创声明与素材来源核验，涉及第三方音乐与影像素材时，必须提供授权说明。平台与多家版权方建立合作，为创作者提供可商用的素材库，同时上线重复内容识别机制，从源头减少搬运与二次剪辑带来的版权风险。</p>
+          <p>高清不只是分辨率。我们在转码策略上优先保证运动画面的清晰度与色彩的稳定，对部分设备提供自适应码率，让偏远地区与移动网络下的用户也能流畅观看。对于重点原创作品，编辑部会提供人工调色与声音处理建议，帮助创作者把作品打磨到更好的状态。这些工作不会被写进推荐语，却直接影响观看体验。</p>
+          <p>更重要的是，正版意味着可追溯。每一条视频都有完整的创作链路记录，包括作者、拍摄时间、素材来源与授权范围。当社区用户举报侵权时，平台会在规定时间内响应并公示处理结果。我们认为，只有把规则讲清楚，创作者才敢把心血放在这里，用户也才能放心把它当作长期观看与收藏的地方。</p>
+        </article>
+        <article>
+          <h3 class="pn-h3">三、社区不是流量池，而是创作者与观众的长期关系</h3>
+          <p>朴妮唛把社区定义为“长期关系”，而不是“短期流量”。平台设置了创作者成长路径，从新人扶持、专项训练到专题共创，逐步开放资源。新人阶段有编辑一对一沟通选题，中期会参与平台选题会，成熟创作者则可以发起自己的专题企划，获得官方流量与制作支持。这条路径不保证每个人都能爆红，但保证认真做内容的人不会被系统轻易忽略。</p>
+          <p>观众一侧，我们更看重评论质量而非数量。评论区支持长文回复，鼓励具体讨论，反对无意义刷屏。平台定期整理“有价值的讨论”，把它们放进专题内容中，让观众的观点也进入内容的循环。不少创作者反馈，真正的选题灵感来自评论区的一条具体留言，而不是数据后台的曲线。这种反馈机制，是社区活力的真实来源。</p>
+          <p>数据也印证了这一点。朴妮唛的月活跃创作者中，超过六成保持稳定更新超过一年；重点内容的平均完播率高于行业水平；内容二次收藏率持续上升。这些数字背后，是一个个愿意把作品放在这里的普通人，以及愿意花时间看完的观众。我们始终认为，这才是视频品牌最值得被信赖的资产。</p>
+        </article>
+        <article>
+          <h3 class="pn-h3">四、面向未来的内容生态与社会责任</h3>
+          <p>未来三年，朴妮唛会把资源继续投向垂直领域的深度内容，包括纪实影像、实用教程、在地文化与创作者访谈。我们将开放更多共创名额，举办年度原创影像比赛与线下放映活动，让作品从屏幕走到真实的观众面前。同时，平台会完善青少年模式与内容分级提示，为不同年龄段的用户提供更合适的观看环境。</p>
+          <p>作为一家持续运营的企业，我们也把社会责任写进日常：支持公益影像记录、为乡村学校提供影像课程、与地方文化机构合作保存口述历史。这些项目不会带来直接收益，但它们和平台的内容理念一致——记录真实，留下值得被记住的东西。这就是朴妮唛作为一个视频品牌，愿意长期做下去的事。</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S6 用户评价 -->
+<section class="pn-sec" id="pn-reviews">
+  <div class="pn-wrap">
+    <div class="pn-sec-head">
+      <span class="pn-sec-kicker">VOICE · 社区口碑</span>
+      <h2>用户怎么说：朴妮唛社区的真实评价</h2>
+      <p>以下评价来自社区用户的公开留言，我们保留原始语气与长度差异，不做美化处理。</p>
+    </div>
+    <div class="pn-review-wrap">
+      <div class="pn-reviews">
+        <article class="pn-review">
+          <div class="pn-review-head"><b>林间有风</b><span>观看 2 年</span></div>
+          <p>在这里看完了好几部纪实短片，节奏不赶，声音做得很舒服。最难得的是评论区真的在聊内容，而不是在吵架。</p>
+        </article>
+        <article class="pn-review">
+          <div class="pn-review-head"><b>阿树要早睡</b><span>创作者 · 更新 46 期</span></div>
+          <p>第一次有平台编辑认真看完我的片子并给出具体建议，连第 2 分 17 秒那个转场都提到了。那一刻我决定长期留在这里更新。</p>
+        </article>
+        <article class="pn-review">
+          <div class="pn-review-head"><b>三分钟热度</b><span>普通用户</span></div>
+          <p>手机上播放很流畅，高清切换也顺，没有那种莫名其妙跳出来的广告。就是希望专题更新能再快一点。</p>
+        </article>
+        <article class="pn-review">
+          <div class="pn-review-head"><b>剪辑新手小陈</b><span>学习教程 3 个月</span></div>
+          <p>从剪辑入门系列一路追下来，讲结构的部分讲得特别清楚。按教程重剪了第一条片子，完播率从 21% 提到了 46%，实打实的进步。</p>
+        </article>
+        <article class="pn-review">
+          <div class="pn-review-head"><b>看片不说话的猫</b><span>收藏 300+</span></div>
+          <p>喜欢收藏夹的设计，可以自己分专题整理。我给家里老人整理了一个生活记录合集，周末一起看，挺好的。</p>
+        </article>
+        <article class="pn-review">
+          <div class="pn-review-head"><b>橙子汽水</b><span>观看 8 个月</span></div>
+          <p>整体挺好，不过部分老视频的音量确实小了一点，希望以后能统一做一下响度处理。</p>
+        </article>
+        <article class="pn-review">
+          <div class="pn-review-head"><b>南风知我意</b><span>社区活跃用户</span></div>
+          <p>投稿流程比想象中顺利，版权说明页写得很细，照着填一遍就清楚了。审核大概两天，反馈里还说明了审核依据。</p>
+        </article>
+      </div>
+      <aside class="pn-quote">
+        <div class="pn-stars" aria-label="五星好评">★★★★★</div>
+        <blockquote>“朴妮唛让我重新找回‘完整看完一部作品’的习惯。它不催你，也不吵你。”</blockquote>
+        <footer>—— 社区用户 @林间有风，观看记录 2 年</footer>
+        <div class="pn-quote-score">
+          <b>9.4</b>
+          <span>综合口碑评分<br>基于 3,186 条社区评价</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- S7 企业动态 + 合作品牌 -->
+<section class="pn-sec alt" id="pn-updates">
+  <div class="pn-wrap">
+    <div class="pn-split">
+      <div>
+        <div class="pn-sec-head" style="margin-bottom:20px">
+          <span class="pn-sec-kicker">NEWS · 企业动态</span>
+          <h2>朴妮唛官方发布与内容更新</h2>
+        </div>
+        <div class="pn-updates">
+          <article class="pn-update">
+            <time>2026.11.18</time>
+            <div>
+              <h4>「夜色里的城市」纪实企划第 3 期上线</h4>
+              <p>本期新增 3 部原创短片，同步开放下一期创作者报名，报名截止至 12 月 10 日。</p>
+            </div>
+          </article>
+          <article class="pn-update">
+            <time>2026.11.09</time>
+            <div>
+              <h4>平台高清转码策略升级</h4>
+              <p>移动端与弱网环境下画面稳定性提升，重点原创作品新增人工调色与声音优化建议。</p>
+            </div>
+          </article>
+          <article class="pn-update">
+            <time>2026.10.27</time>
+            <div>
+              <h4>年度原创影像比赛启动报名</h4>
+              <p>面向全社区征集真实生活题材作品，设纪实、生活、教程三个单元，获奖作品将在官方首页展映。</p>
+            </div>
+          </article>
+          <article class="pn-update">
+            <time>2026.10.15</time>
+            <div>
+              <h4>版权素材库新增 1,200 条可商用音效</h4>
+              <p>所有素材均附授权说明，创作者可在上传页直接引用并生成来源记录。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div>
+        <div class="pn-sec-head" style="margin-bottom:20px">
+          <span class="pn-sec-kicker">PARTNER · 合作伙伴</span>
+          <h2>与我们一起构建内容生态的伙伴</h2>
+        </div>
+        <div class="pn-partners">
+          <div class="pn-partner">
+            <span class="pn-partner-dot" style="background:#2f6df6">光</span>
+            <div><b>光影器材实验室</b><span>设备测评合作</span></div>
+          </div>
+          <div class="pn-partner">
+            <span class="pn-partner-dot" style="background:#ff5a5f">城</span>
+            <div><b>城市文化馆</b><span>在地影像联展</span></div>
+          </div>
+          <div class="pn-partner">
+            <span class="pn-partner-dot" style="background:#1f8a4c">声</span>
+            <div><b>声场音乐版权</b><span>正版音频授权</span></div>
+          </div>
+          <div class="pn-partner">
+            <span class="pn-partner-dot" style="background:#7a5af8">学</span>
+            <div><b>青禾影像学院</b><span>创作者培训共建</span></div>
+          </div>
+        </div>
+        <div class="pn-submit">
+          <div>
+            <h3>把你的作品交给朴妮唛</h3>
+            <p>支持原创短片、教程与生活记录投稿。通过审核后进入官方推荐池，并获得正版素材与流量支持。</p>
+          </div>
+          <button class="pn-btn-primary" id="pnSubmitOpen2">立即投稿</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S7 FAQ -->
+<section class="pn-sec" id="pn-faq">
+  <div class="pn-wrap">
+    <div class="pn-sec-head">
+      <span class="pn-sec-kicker">HELP · 帮助中心</span>
+      <h2>常见问题：关于朴妮唛官方网站的使用与投稿</h2>
+      <p>整理社区中提问最多的问题，如未找到答案，可通过页面底部联系方式与我们沟通。</p>
+    </div>
+    <div class="pn-faq">
+      <details open>
+        <summary>如何免费观看朴妮唛的原创内容？</summary>
+        <p>注册并登录后即可观看平台大部分原创与正版内容，重点专题与高清片源均可正常播放，不设付费门槛。部分合作版权内容会标注可用范围，请以作品详情页说明为准。</p>
+      </details>
+      <details>
+        <summary>投稿需要满足哪些基本条件？</summary>
+        <p>作品需为本人原创或已取得完整授权，画面清晰、声音可辨识，时长建议在 1 分钟以上。上传时需填写素材来源与授权说明，涉及第三方音乐须提供授权凭证。审核一般在两个工作日内完成。</p>
+      </details>
+      <details>
+        <summary>平台如何判定是否为正版内容？</summary>
+        <p>我们通过原创声明、素材授权说明与重复内容识别三方交叉核验。对存在疑问的作品会要求补充材料，核验未通过的内容不会进入推荐池，并会向作者说明具体原因。</p>
+      </details>
+      <details>
+        <summary>发现疑似侵权内容应该怎么反馈？</summary>
+        <p>可在作品详情页点击举报，选择对应的举报类型并填写必要信息。平台承诺在规定时间内响应，处理结果会通过站内通知告知举报人，并对确认侵权的内容做下线处理。</p>
+      </details>
+      <details>
+        <summary>创作者可以获得哪些支持？</summary>
+        <p>包括新人选题沟通、剪辑与声音优化建议、正版素材库使用权、专题共创名额、官方推荐位与线下放映机会。不同阶段支持的侧重点不同，具体以创作者中心的成长路径说明为准。</p>
+      </details>
+      <details>
+        <summary>比赛与专题报名如何参与？</summary>
+        <p>在活动页面填写报名表并提交作品链接即可，报名成功后会收到确认信息。年度比赛与专题企划的评审标准会在活动说明中公开，评审结果统一在官方动态中公示。</p>
+      </details>
+      <details>
+        <summary>观看时出现卡顿怎么办？</summary>
+        <p>建议先在清晰度设置中切换为自动模式，或检查当前网络状态。平台已针对弱网环境优化码率策略，如仍有问题，可通过帮助中心提交具体设备与网络信息，便于我们定位处理。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- S8 页脚 -->
+<footer class="pn-footer">
+  <div class="pn-wrap">
+    <div class="pn-footer-grid">
+      <div>
+        <div class="pn-footer-brand">
+          <span class="pn-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#fff;margin-left:2px"><path d="M8 5l12 7-12 7z"/></svg>
+          </span>
+          <b>朴妮唛</b>
+        </div>
+        <p>朴妮唛官方网站 · 一个专注原创、正版与高清的视频品牌门户。我们深耕真实影像与创作者社区，持续构建多元、包容、值得信赖的内容生态。</p>
+        <p style="margin-top:12px;color:#8ea6c8">合作与投稿：creator@pnm-video.example<br>内容支持：周一至周五 10:00–19:00</p>
+      </div>
+      <div>
+        <h5>内容频道</h5>
+        <ul>
+          <li><a href="#pn-focus">焦点推荐</a></li>
+          <li><a href="#pn-videos">视频精选</a></li>
+          <li><a href="#pn-chapters">专题企划</a></li>
+          <li><a href="#pn-authors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>品牌与社区</h5>
+        <ul>
+          <li><a href="#pn-deep">品牌深度解读</a></li>
+          <li><a href="#pn-reviews">社区口碑</a></li>
+          <li><a href="#pn-updates">企业动态</a></li>
+          <li><a href="#pn-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>创作支持</h5>
+        <ul>
+          <li><a href="#pn-videos">上传与发布指南</a></li>
+          <li><a href="#pn-chapters">专题报名</a></li>
+          <li><a href="#pn-updates">年度比赛</a></li>
+          <li><a href="#pn-faq">版权与授权说明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pn-footer-bottom">
+      <span>© 2026 朴妮唛视频品牌 版权所有 · 持续运营中</span>
+      <span>官方发布 · 原创正版 · 备案号：示例备案 00000000 号</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 投稿弹窗 -->
+<div class="pn-modal" id="pnSubmitModal" role="dialog" aria-modal="true" aria-labelledby="pnSubmitTitle">
+  <div class="pn-modal-box pn-modal-inner">
+    <button class="pn-modal-close" id="pnSubmitClose" aria-label="关闭">×</button>
+    <h3 id="pnSubmitTitle">投稿到朴妮唛</h3>
+    <p>填写作品信息，编辑部将在两个工作日内反馈。请确保内容为原创或已取得完整授权。</p>
+    <input type="text" id="pnSubmitAuthor" placeholder="你的昵称" aria-label="昵称">
+    <input type="text" id="pnSubmitTitleInput" placeholder="作品标题" aria-label="作品标题">
+    <textarea id="pnSubmitDesc" placeholder="简单介绍作品内容、素材来源与授权情况" aria-label="作品介绍"></textarea>
+    <div class="pn-modal-foot">
+      <button class="pn-btn-ghost" id="pnSubmitCancel" type="button">取消</button>
+      <button class="pn-btn-primary" id="pnSubmitSend" type="button">提交投稿</button>
+    </div>
+  </div>
+</div>
+
+<div class="pn-toast" id="pnToast" role="status" aria-live="polite"></div>
+
+<button class="pn-totop" id="pnToTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><path d="M12 4l8 8h-5v8h-6v-8H4z"/></svg>
+</button>
+
+<script>
+(function(){
+  var nav = document.getElementById('pnNav');
+  var burger = document.getElementById('pnBurger');
+  var toast = document.getElementById('pnToast');
+  var toastTimer = null;
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  if(burger){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('pnSearch');
+  var searchBtn = document.getElementById('pnSearchBtn');
+  function doSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){
+      showToast('请输入内容或创作者关键词');
+      searchInput.focus();
+      return;
+    }
+    showToast('正在为你筛选“' + kw + '”相关内容');
+    var items = document.querySelectorAll('.pn-list-item, .pn-video-card, .pn-vrow');
+    var hit = 0;
+    items.forEach(function(el){
+      var text = el.textContent || '';
+      if(text.indexOf(kw) > -1){
+        el.style.outline = '2px solid #2f6df6';
+        hit++;
+        setTimeout(function(){ el.style.outline = ''; }, 2000);
+      }
+    });
+    showToast(hit > 0 ? '找到 ' + hit + ' 条与“' + kw + '”相关的内容' : '暂未找到“' + kw + '”相关结果，试试其他关键词');
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+  }
+
+  /* 点赞 +1 切换 */
+  document.querySelectorAll('.pn-like-btn').forEach(function(box){
+    var btn = box.querySelector('.pn-iconbtn');
+    var count = box.querySelector('.pn-count');
+    var base = parseInt(box.getAttribute('data-count'), 10) || 0;
+    var on = false;
+    btn.addEventListener('click', function(){
+      on = !on;
+      btn.classList.toggle('on', on);
+      var n = on ? base + 1 : base;
+      count.textContent = n.toLocaleString('en-US');
+      showToast(on ? '已点赞' : '已取消点赞');
+    });
+  });
+
+  /* 收藏切换 */
+  document.querySelectorAll('.pn-fav-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('on');
+      showToast(on ? '已加入收藏' : '已取消收藏');
+    });
+  });
+
+  /* 复制链接 */
+  function copyText(text, okMsg){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ showToast(okMsg); }, function(){ showToast('复制失败，请手动复制'); });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); showToast(okMsg); } catch(e){ showToast('复制失败，请手动复制'); }
+      document.body.removeChild(ta);
+    }
+  }
+  document.querySelectorAll('.pn-copy-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var row = btn.closest('.pn-vrow');
+      var title = row ? row.querySelector('h4').textContent : '朴妮唛原创内容';
+      copyText(title, '内容链接已复制');
+    });
+  });
+
+  /* 投稿弹窗 */
+  var modal = document.getElementById('pnSubmitModal');
+  function openModal(){
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    var first = document.getElementById('pnSubmitAuthor');
+    if(first){ setTimeout(function(){ first.focus(); }, 80); }
+  }
+  function closeModal(){
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  ['pnSubmitOpen','pnSubmitOpen2'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){ el.addEventListener('click', openModal); }
+  });
+  var closeBtn = document.getElementById('pnSubmitClose');
+  var cancelBtn = document.getElementById('pnSubmitCancel');
+  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
+  if(cancelBtn){ cancelBtn.addEventListener('click', closeModal); }
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('show')){ closeModal(); } });
+
+  var sendBtn = document.getElementById('pnSubmitSend');
+  if(sendBtn){
+    sendBtn.addEventListener('click', function(){
+      var a = document.getElementById('pnSubmitAuthor').value.trim();
+      var t = document.getElementById('pnSubmitTitleInput').value.trim();
+      if(!a || !t){
+        showToast('请填写昵称与作品标题');
+        return;
+      }
+      closeModal();
+      document.getElementById('pnSubmitAuthor').value = '';
+      document.getElementById('pnSubmitTitleInput').value = '';
+      document.getElementById('pnSubmitDesc').value = '';
+      showToast('投稿已提交，编辑部将尽快反馈');
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('pnToTop');
+  window.addEventListener('scroll', function(){
+    if(window.pageYOffset > 520){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, { passive: true });
+  toTop.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* 数字滚动（核心数据轻量动画） */
+  var animated = false;
+  function animateStats(){
+    if(animated) return;
+    var hero = document.getElementById('pn-hero');
+    if(!hero) return;
+    var rect = hero.getBoundingClientRect();
+    if(rect.top < window.innerHeight && rect.bottom > 0){
+      animated = true;
+      document.querySelectorAll('.pn-hero-stats .pn-stat b').forEach(function(el){
+        var raw = el.textContent;
+        var num = parseFloat(raw.replace(/[^\d.]/g, ''));
+        if(isNaN(num) || num === 0) return;
+        var suffix = raw.replace(/[\d.,]/g, '');
+        var isFloat = raw.indexOf('.') > -1;
+        var start = null;
+        var dur = 900;
+        function step(ts){
+          if(!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var val = num * p;
+          if(isFloat){ el.textContent = val.toFixed(1) + suffix; }
+          else { el.textContent = Math.round(val).toLocaleString('en-US') + suffix; }
+          if(p < 1){ requestAnimationFrame(step); }
+          else { el.textContent = raw; }
+        }
+        requestAnimationFrame(step);
+      });
+    }
+  }
+  window.addEventListener('scroll', animateStats, { passive: true });
+  animateStats();
+})();
+</script>
+</body>
+        </html>
